@@ -9,6 +9,7 @@ import TheHeader from '../../components/TheHeader'
 import Dropzone from '../../components/Dropzone'
 
 import './styles.css'
+import ConfirmationScreen from '../../components/ConfirmationScreen'
 
 interface Item {
   id: number
@@ -26,6 +27,8 @@ interface CityResponse {
 
 const CreatePoint = () => {
   const history = useHistory()
+
+  const [showConfirmation, setShowConfirmation] = useState<boolean>()
 
   const [items, setItems] = useState<Item[]>([])
   const [stateInitials, setStateInitials] = useState<string[]>([])
@@ -128,9 +131,12 @@ const CreatePoint = () => {
 
     await api.post('points', data)
 
-    alert('ponto de coleta criado')
+    setShowConfirmation(true)
 
-    history.push('/')
+    setTimeout(() => {
+      setShowConfirmation(true)
+      history.push('/')
+    }, 2000)
   }
 
   return (
@@ -252,6 +258,7 @@ const CreatePoint = () => {
 
         <button type="submit">Cadastrar ponto de coleta</button>
       </form>
+      {showConfirmation && <ConfirmationScreen />}
     </div>
   )
 }
