@@ -74,11 +74,20 @@ $ npm start
 ### :exclamation: Mobile
 
 ```bash
-Soon 🕛
+# Install Expo CLI globally
+$ npm install -g expo-cli
+
+# Install dependencies
+$ npm install && expo install
+
+# Run
+$ npm start
+
+# Intall Expo's app in your smartphone, open it and scan the QR the see the app running
 ```
 
 ---
 
 <h4 align="center">
-    Made with 💜 by <a href="https://www.linkedin.com/in/victor.santiago" target="_blank">Victor Santiago</a>
+    Made with 💜 by <a href="https://www.linkedin.com/in/victorhsantiago" target="_blank">Victor Santiago</a>
 </h4>
