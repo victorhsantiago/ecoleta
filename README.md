@@ -83,7 +83,7 @@ $ npm install && expo install
 # Run
 $ npm start
 
-# Intall Expo's app in your smartphone, open it and scan the QR the see the app running
+# Install Expo app in your smartphone, open it and scan the QR to see the app running
 ```
 
 ---
